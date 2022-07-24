@@ -17,5 +17,5 @@ This section describes how to take a previously seperate repository and add it i
   - `--no-commit` tells git to not commit immediately, and give us the option to inspect the results before committing. Git more than likely will give us a wrong result by spewing everything into the root of your monorepo, so we want to have the opportunity to inspect it and clean up.
 - Notice how everything has indeed been put in the root of your repo. Go in and manually (without using git) revert all of its changes, staging the changes you just made using `git add -A`, and checking using git status (I need a better way to do this). You want these all gone because you do have the files themselves committed already, you just need the merge commit to bring in the history. The merge commit should be completely empty.
 - When `git status` does not show any modified files, finalise the merge commit using something like `git commit -m "merge my-package"`.
-- If you wish to, you can remove the remote using `git remote rm my-package-remote`. It probabl
+- If you wish to, you can remove the remote using `git remote rm my-package-remote`.
 - Done!
